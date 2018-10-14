@@ -21,7 +21,7 @@ public class Masivi6 {
 		}
 			for(int k=0;k<arr.length;k++){
 				if(arr[k] == best) {
-					System.out.println(k);
+					System.out.println(k+1);
 				}
 			}
 			System.out.println("Най-слаби:");
@@ -32,7 +32,7 @@ public class Masivi6 {
 			}
 				for(int k=0;k<arr.length;k++){
 					if(arr[k] == worst) {
-						System.out.println(k);
+						System.out.println(k+1);
 					}
 				}
 			
