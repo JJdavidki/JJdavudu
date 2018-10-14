@@ -23,7 +23,6 @@ public class Masivi3 {
 				if(arr[i] == arr2[j]) {
 					System.out.println(arr2[j]);
 				}
-			
 			}
 			j=0;
 		
