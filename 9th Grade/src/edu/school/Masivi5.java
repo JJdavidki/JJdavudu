@@ -34,7 +34,7 @@ public class Masivi5 {
 			}
 			arr2[k] = biggest;
 			arr[zapazeno] = smallest;
-			biggest = arr[0];
+			biggest = arr[0]-1;
 		}
 		int biggest2 = arr11[0];
 		for(int j=0;j<arr11.length;j++) {
@@ -52,7 +52,7 @@ public class Masivi5 {
 			}
 			arr2[k] = smallest2;
 			arr11[zapazeno] = biggest2;
-			smallest2 = arr11[0];
+			smallest2 = arr11[0]+1;
 		}
 		for(int g=0;g<arr2.length;g++) {
 			System.out.println(arr2[g]);
