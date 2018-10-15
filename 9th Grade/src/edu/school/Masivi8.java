@@ -37,15 +37,20 @@ public class Masivi8 {
 				arr[zapazeno] = biggest;
 				smallest = arr[0]+1;
 			}
+			int indikator = 0;
 			int br = 0;
 			 for(int f=0;f<arrbig.length;f++) {
 				 for(int d=0;d<arrbig.length;d++) {
-					 if(arr[f] == arr[d]) {
+					 if(arrbig[f] == arrbig[d]) {
 						 br++;
 					 }
 				 }
-				 if(br-1>arr0.length+1/2) {
+				 if(br-1>(arr0.length+1)/2) {
 					 break;
+				 }
+				 if(br-1==(arr0.length+1)/2) {
+					 zapazeno = f;
+					 indikator = 1;
 				 }
 				 br=0;
 			 }
@@ -53,6 +58,30 @@ public class Masivi8 {
 				 System.out.println("Cant do");
 			 }
 			 else {
+				 if(indikator == 1) {
+					 int [] arrpisnami = new int[arr0.length - (arr0.length+1)/2];
+						for(int w=0;w<arrbig.length;w++) {
+							if(arrbig[w] != arrbig[zapazeno]) {
+								arrpisnami[br] = arrbig[w];
+								br++;
+							}
+						}
+						br=0;
+					 for(int v=0;v<arrbig.length;v++) {
+						 if(v%2==0) {
+							arrfinal[v] = arrbig[zapazeno];
+						 }
+						 else {
+							arrfinal[v] = arrpisnami[br];
+							br++;
+						 }
+					 } 
+					 System.out.println("Can do");
+						for(int u=0;u<arrfinal.length;u++) {
+							System.out.println(arrfinal[u]);
+								}
+				 }
+				 else {
 				 int golqmo = arrbig.length - 1;
 				 int malko = 0;
 				 for(int v=0;v<arrbig.length;v++) {
@@ -65,11 +94,13 @@ public class Masivi8 {
 						 malko++; 
 					 }
 				 }
-			 }
+			 
 			 System.out.println("Can do");
 			for(int u=0;u<arrfinal.length;u++) {
 				System.out.println(arrfinal[u]);
-			}
+					}
+				 }
+			 }
 		}
 	}
 
